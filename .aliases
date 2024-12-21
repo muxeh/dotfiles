@@ -1,0 +1,6 @@
+# shell aliases
+# clear
+alias clc="clear"
+# vi to nvim
+alias vi="nvim"
+# alias vi to nvim
