@@ -1,8 +1,9 @@
 # silence zsh warning
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# source aliases
+# source dot files
 [ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.bash_prompt ] && source ~/.bash_prompt
 
 # Bash completion - case-insensitive (like your Zsh matcher-list)
 bind "set completion-ignore-case on"
