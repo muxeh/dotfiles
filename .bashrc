@@ -30,35 +30,6 @@ export TRICK_EXCLUDE="/opt/homebrew"
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Define ANSI color escape codes
-RESET='\[\e[0m\]'
-BEIGE='\[\e[38;5;230m\]'
-GREEN='\[\e[38;5;144m\]'
-ALOE='\[\e[38;5;151m\]'
-FG_WHITE='\[\e[38;5;255m\]'
-FG_LIGHT_YELLOW='\[\e[38;5;230m\]'
-
-# Git functions
-git_branch() {
-  branch=$(git branch --show-current 2>/dev/null)
-  if [[ -n $branch ]]; then
-    echo -n " ${branch}"
-  fi
-}
-
-git_status() {
-  if git rev-parse --is-inside-work-tree &>/dev/null; then
-    if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-      echo -n " *"
-    else
-      echo -n " >"
-    fi
-  fi
-}
-
-# Custom prompt
-PS1="${BEIGE}\u@\h${RESET} ${GREEN}\w${RESET}${ALOE}\$(git_branch)${RESET}${FG_WHITE}\$(git_status)${RESET} "
-
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
