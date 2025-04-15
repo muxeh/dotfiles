@@ -9,3 +9,5 @@ alias cdp="cd ~/Documents/Projects"
 alias gis="git status"
 alias gif="git diff"
 alias gitch="git switch"
+# directory
+alias la="ls -a"
