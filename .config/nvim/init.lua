@@ -42,6 +42,9 @@ require('telescope').setup {
     },
 }
 
+-- Make file completion case-insensitive
+vim.o.wildignorecase = true
+
 -- Map <leader>fr to search for recent files
 vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { noremap = true, silent = true, desc = "Fuzzy find recent files" })
 
