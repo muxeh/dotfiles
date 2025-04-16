@@ -1,5 +1,5 @@
 -- vim commands
-vim.cmd('syntax on')
+-- vim.cmd('syntax on')
 vim.cmd('set number')
 vim.cmd('set relativenumber')
 
@@ -10,11 +10,22 @@ require('packer').startup(function(use)
     use 'goolord/alpha-nvim'     -- Splash screen plugin
     use 'nvim-lua/plenary.nvim' -- Dependency for Telescope
     use 'nvim-telescope/telescope.nvim'
+    -- NeoVim themes includes
     use 'bluz71/vim-moonfly-colors'
+    use 'navarasu/onedark.nvim'
 end)
 
--- Set colorscheme
-vim.cmd [[colorscheme moonfly]]
+-- Set colorscheme -- comment in as desired
+-- -- moonfly
+-- vim.cmd [[colorscheme moonfly]]
+-- onedark
+require('onedark').setup {
+    style = 'warmer'
+}
+require('onedark').load()
+-- require('colors.aloe')
+
+-- vim.cmd[[colorscheme aloe]]
 
 -- set space as leader
 vim.g.mapleader = " "  -- Set space as the leader key

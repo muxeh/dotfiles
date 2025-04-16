@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/maxbinaei/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/maxbinaei/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/maxbinaei/.local/share/nvim/site/pack/packer/start/packer.nvim",
