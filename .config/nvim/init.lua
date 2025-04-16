@@ -45,6 +45,23 @@ require('telescope').setup {
 -- Make file completion case-insensitive
 vim.o.wildignorecase = true
 
+-- Vertical splits open to the right
+vim.o.splitright = true
+
+-- Horizontal splits open below
+vim.o.splitbelow = true
+
+-- Easy window navigation with Ctrl + hjkl
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+-- Move panes around
+vim.keymap.set('n', '<C-x>h', '<C-w>H', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-x>j', '<C-w>J', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-x>k', '<C-w>K', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-x>l', '<C-w>L', { noremap = true, silent = true })
+
 -- Map <leader>fr to search for recent files
 vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { noremap = true, silent = true, desc = "Fuzzy find recent files" })
 
