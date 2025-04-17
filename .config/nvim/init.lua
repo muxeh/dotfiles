@@ -42,6 +42,9 @@ require('telescope').setup {
     },
 }
 
+-- Disable wrapping of lines
+vim.o.wrap = false
+
 -- Make file completion case-insensitive
 vim.o.wildignorecase = true
 
